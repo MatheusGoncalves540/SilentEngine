@@ -1,0 +1,80 @@
+// Silent Linen — built-in light theme.
+// Source of truth for values. Schema: design/05-themes.md §2.
+// Contrast pairs verified by the theme test (design/02-tokens.md §1.5).
+Theme(
+    id: "silent-linen",
+    name: "Silent Linen",
+    kind: Light,
+    extends: None,
+    schema: 1,
+
+    palette: {
+        "linen_0":    "#FFFFFF",
+        "linen_50":   "#FBF8F2",
+        "linen_100":  "#F4EFE6",
+        "linen_150":  "#EAE3D7",
+        "linen_200":  "#E6DED0",
+        "linen_250":  "#E2D9CA",
+        "linen_300":  "#D3C8B6",
+        "linen_400":  "#B8AB96",
+        "linen_500":  "#A89C8A",
+        "linen_700":  "#625849",
+        "linen_800":  "#4A4237",
+        "linen_950":  "#2A251F",
+        "violet_100": "#E3DAF7",
+        "violet_500": "#7A5AD6",
+        "violet_600": "#6B4BC9",
+        "violet_700": "#5A3BB8",
+    },
+
+    tokens: {
+        "surface.sunken":   "linen_150",
+        "surface.base":     "linen_100",
+        "surface.raised":   "linen_50",
+        "surface.overlay":  "linen_0",
+        "state.hover":      "linen_200",
+        "state.active":     "linen_300",
+        "selection.bg":     "violet_100",
+
+        "border.subtle":    "linen_250",
+        "border.default":   "linen_300",
+        "border.strong":    "linen_400",
+
+        "text.primary":     "linen_950",
+        "text.secondary":   "linen_800",
+        "text.muted":       "linen_700",
+        "text.disabled":    "linen_500",
+        "text.on_accent":   "#FFFFFF",
+
+        "accent.fill":      "violet_600",
+        "accent.fill_hover":"violet_700",
+        "accent.text":      "violet_700",
+        "focus.ring":       "violet_500",
+
+        "status.ok":        "#3F6629",
+        "status.warn":      "#82510F",
+        "status.error":     "#9E3B27",
+        "status.info":      "#2E5F82",
+
+        "kind.entity":      "#6B5F4F",
+        "kind.transform":   "#2E5F82",
+        "kind.mesh":        "#3F6629",
+        "kind.material":    "#8E4F86",
+        "kind.light":       "#7A6010",
+        "kind.audio":       "#1F6E63",
+        "kind.plugin":      "#82510F",
+        "kind.ai":          "violet_700",
+
+        "viewport.bg":      "#DCD4C6",
+        "viewport.grid":    "#CFC5B4",
+        "axis.x":           "#9E3B27",
+        "axis.y":           "#3F6629",
+        "axis.z":           "#2E5F82",
+
+        "shadow.color":     "#3C2D1424",
+    },
+
+    components: {},
+
+    metrics: (density: Compact, radius_scale: 1.0, ui_scale: 1.0),
+)

@@ -1,0 +1,82 @@
+// Silent Ember — built-in dark theme (default).
+// Source of truth for values. Schema: design/05-themes.md §2.
+// Contrast pairs verified by the theme test (design/02-tokens.md §1.5).
+Theme(
+    id: "silent-ember",
+    name: "Silent Ember",
+    kind: Dark,
+    extends: None,
+    schema: 1,
+
+    palette: {
+        "clay_1000": "#12110F",
+        "clay_950":  "#161411",
+        "clay_900":  "#1C1A17",
+        "clay_850":  "#24211D",
+        "clay_800":  "#2B2823",
+        "clay_750":  "#322E28",
+        "clay_700":  "#3B362F",
+        "clay_650":  "#4D463D",
+        "clay_500":  "#6B6256",
+        "clay_400":  "#A39886",
+        "clay_300":  "#C2B8A8",
+        "clay_100":  "#EDE6DA",
+        "violet_900": "#3A3050",
+        "violet_500": "#7A5AD6",
+        "violet_450": "#8A6BE3",
+        "violet_400": "#9D80EE",
+        "violet_300": "#B9A3F5",
+    },
+
+    tokens: {
+        // surfaces (elevation e0..e3, see 02-tokens §5)
+        "surface.sunken":   "clay_950",
+        "surface.base":     "clay_900",
+        "surface.raised":   "clay_850",
+        "surface.overlay":  "clay_800",
+        "state.hover":      "clay_750",
+        "state.active":     "clay_700",
+        "selection.bg":     "violet_900",
+
+        "border.subtle":    "#2F2B26",
+        "border.default":   "clay_700",
+        "border.strong":    "clay_650",
+
+        "text.primary":     "clay_100",
+        "text.secondary":   "clay_300",
+        "text.muted":       "clay_400",
+        "text.disabled":    "clay_500",
+        "text.on_accent":   "#FFFFFF",
+
+        "accent.fill":      "violet_500",
+        "accent.fill_hover":"violet_450",
+        "accent.text":      "violet_300",
+        "focus.ring":       "violet_400",
+
+        "status.ok":        "#8FB573",
+        "status.warn":      "#E0A458",
+        "status.error":     "#E07E66",
+        "status.info":      "#6FA3C7",
+
+        "kind.entity":      "#D8CFC0",
+        "kind.transform":   "#6FA3C7",
+        "kind.mesh":        "#8FB573",
+        "kind.material":    "#C08AB8",
+        "kind.light":       "#E0C068",
+        "kind.audio":       "#5FB3A6",
+        "kind.plugin":      "#E0A458",
+        "kind.ai":          "violet_300",
+
+        "viewport.bg":      "clay_1000",
+        "viewport.grid":    "#221F1B",
+        "axis.x":           "#C4553D",
+        "axis.y":           "#5E8A45",
+        "axis.z":           "#3F78A8",
+
+        "shadow.color":     "#00000066",
+    },
+
+    components: {},
+
+    metrics: (density: Compact, radius_scale: 1.0, ui_scale: 1.0),
+)

@@ -1,0 +1,31 @@
+// Bootstrap baseline for a new host. See docs/spec/09-metrics.md §11.7.
+// Values are the meta ceilings from docs/spec/01-mission.md, used until a real
+// gated run on the host becomes the baseline. Regenerate only via
+// `engine targets set-baseline <run_id>`.
+TargetV1(
+    run_id: "_default",
+    host: (
+        gpu: "unknown",
+        gpu_driver: "unknown",
+        cpu: "unknown",
+        os: "unknown",
+        monitor_refresh_hz: 0,
+        resolution: (2560, 1440),
+    ),
+    started_at: "1970-01-01T00:00:00Z",
+    frame_count: 0,
+    durations: {
+        "render.frame.gpu_ms": (n: 0, min: 0.0, p50: 5.5, p90: 5.5, p99: 11.0, max: 16.7, sum: 0.0, sum_sq: 0.0),
+        "render.frame.cpu_ms": (n: 0, min: 0.0, p50: 8.0, p90: 8.0, p99: 11.0, max: 16.7, sum: 0.0, sum_sq: 0.0),
+        "audio.callback.ms":   (n: 0, min: 0.0, p50: 1.0, p90: 1.0, p99: 2.0, max: 5.0,  sum: 0.0, sum_sq: 0.0),
+    },
+    counters: {
+        "audio.underruns": 0,
+        "audio.clip.count": 0,
+        "render.sprite.overflow": 0,
+        "plugins.traps": 0,
+        "render.alloc_bytes_per_frame_max": 256,
+    },
+    baseline: None,
+    gate: Bootstrap,
+)
